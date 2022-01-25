@@ -1,0 +1,7 @@
+[run]
+omit = 
+    *tests*
+    news/*
+    *manage.py
+    *__init__.py
+    *migrations*
