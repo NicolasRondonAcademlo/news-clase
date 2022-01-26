@@ -11,3 +11,17 @@ class Article(models.Model):
     auhtor = models.ForeignKey(
         CustomUser, on_delete=models.CASCADE
     )
+
+    def __str__(self) -> str:
+        return self.title
+
+class Comments(models.Model):
+    author = models.ForeignKey(
+        CustomUser, on_delete=models.CASCADE
+    )
+    article = models.ForeignKey(
+        Article, on_delete=models.CASCADE
+    )
+    body = models.TextField()
+
+
